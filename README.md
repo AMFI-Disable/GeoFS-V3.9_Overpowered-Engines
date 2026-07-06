@@ -1,6 +1,6 @@
 # GeoFS-V3.9_Overpowered-Engines
 
-![Version](https://img.shields.io/badge/Version-v2.0.1-3b82f6?style=flat-square&logo=git&logoColor=white)
+![Version](https://img.shields.io/badge/Version-V2.0.1-3b82f6?style=flat-square&logo=git&logoColor=white)
 ![Ecosystem](https://img.shields.io/badge/GeoFS--V3.9-Overpowered_Engines-ef4444?style=flat-square&logo=zap&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Stable-10b981?style=flat-square&logo=lighthouse&logoColor=white)
 

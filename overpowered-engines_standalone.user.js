@@ -700,7 +700,7 @@
     document.addEventListener("keydown", (e) => overpoweredEnginesSuite.handleKeyPress(e));
 
     if (window.V39_NOTIF) {
-        window.V39_NOTIF.success("GeoFS-V3.9_Overpowered-Engines v2.0.0 Loaded.");
+        window.V39_NOTIF.success("GeoFS-V3.9_Overpowered-Engines V2.0.0 Loaded.");
     }
 
     setInterval(() => {
