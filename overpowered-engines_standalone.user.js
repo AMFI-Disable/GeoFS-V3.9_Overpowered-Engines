@@ -258,7 +258,7 @@
             this.updatePhysicsUI();
             
             // Cross-Module Synchronization for Autothrottle OP-SYNC.
-            document.addEventListener("v39_opSyncStateChanged", (e) => {
+            document.addEventListener("V39_opSyncStateChanged", (e) => {
                 const isLocked = e.detail.active;
                 const thrustSection = document.getElementById("opThrustSection");
                 const lockOverlay = document.getElementById("opThrustLockOverlay");
@@ -280,7 +280,7 @@
             });
             
             // Sync live multiplier values from Autothrottle to the local UI
-            document.addEventListener("v39_opMultiplierUpdated", (e) => {
+            document.addEventListener("V39_opMultiplierUpdated", (e) => {
                 const val = e.detail.value;
                 const inputEl = document.getElementById("opMultInput");
                 const sliderEl = document.getElementById("opMultSlider");
@@ -309,7 +309,7 @@
                 $(document).on("autothrottleOn", () => setTimeout(() => syncCeilingControls(), 0));
                 $(document).on("autothrottleOff", () => setTimeout(() => syncCeilingControls(), 0));
             }
-            document.addEventListener("v39_autothrottleStateChanged", (e) => {
+            document.addEventListener("V39_autothrottleStateChanged", (e) => {
                 syncCeilingControls(e.detail.active);
             });
             setTimeout(syncCeilingControls, 500);
