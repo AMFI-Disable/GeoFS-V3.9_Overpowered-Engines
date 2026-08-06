@@ -125,8 +125,8 @@
 // @license             MIT
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(() => {
+    
 
     console.log("[GeoFS-V3.9_Overpowered-Engines] >> Initializing SAS stability engine...");
 
@@ -162,7 +162,7 @@
                 position: fixed; bottom: 120px; left: 540px; width: 320px; height: auto; z-index: 10000; 
                 display: none; padding: 0; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; 
                 overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); background: rgba(10,15,20,0.85); 
-                backdrop-filter: blur(12px); color: white; font-family: 'Outfit', sans-serif; user-select: none; 
+                backdrop-filter: blur(12px); color: white; font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; user-select: none; 
                 box-sizing: border-box; transform: translate(0,0); transition: none; cursor: grab;
             `;
             
@@ -321,7 +321,7 @@
          * velocity when no user input is detected to prevent aircraft 
          * oscillations during overpowered flight.
          */
-        tickSAS: function() {
+        tickSAS: () => {
             if (!globalThis.isSASActive || !geofs?.aircraft?.instance) return;
             const rb = geofs.aircraft.instance.rigidBody;
             if (!rb) return;
@@ -348,7 +348,7 @@
          * @param {number} val - The numeric value to format.
          * @returns {string} Compact string representation (e.g., 1.5M, 2.3B).
          */
-        formatNumberCompact: function(val) {
+        formatNumberCompact: (val) => {
             if (val >= 1000000000000) return (val / 1000000000000).toFixed(1) + "T";
             if (val >= 1000000000) return (val / 1000000000).toFixed(1) + "B";
             if (val >= 1000000) return (val / 1000000).toFixed(1) + "M";
@@ -431,8 +431,8 @@
                     if (!this.state.isDragging) return;
                     requestAnimationFrame(() => {
                         const winW = window.innerWidth, winH = window.innerHeight, elW = rect.width, elH = rect.height;
-                        let newX = Math.max(0, Math.min(moveE.clientX - this.state.dragOffset.x, winW - elW));
-                        let newY = Math.max(0, Math.min(moveE.clientY - this.state.dragOffset.y, winH - elH));
+                        const newX = Math.max(0, Math.min(moveE.clientX - this.state.dragOffset.x, winW - elW));
+                        const newY = Math.max(0, Math.min(moveE.clientY - this.state.dragOffset.y, winH - elH));
                         el.style.left = newX + "px"; el.style.top = newY + "px"; el.style.bottom = "auto";
                     });
                 };
@@ -500,7 +500,7 @@
          * Synchronizes CSS styles, button states, and interaction locks based 
          * on the current physics mode.
          */
-        updatePhysicsUI: function(activeState) {
+        updatePhysicsUI: (activeState) => {
             const tBtn = document.getElementById("opThrustBtn"), cBtn = document.getElementById("opCeilingBtn"), sBtn = document.getElementById("opSASBtn");
             const tInp = document.getElementById("opMultInput"), tSld = document.getElementById("opMultSlider"), cSld = document.getElementById("opCeilingSlider");
             const isAthrActive = typeof activeState === "boolean" ? activeState : !!(window.geofs?.autothrottle?.on);
@@ -565,15 +565,15 @@
     };
 
     // Physics Controls.
-    window.toggleThrustMode = function() {
+    window.toggleThrustMode = () => {
         if (globalThis.isThrustActive) removeThrust(); else applyThrust();
     };
 
-    window.toggleCeilingMode = function() {
+    window.toggleCeilingMode = () => {
         if (globalThis.isCeilingActive) removeCeiling(); else applyCeiling();
     };
 
-    window.toggleSASMode = function() {
+    window.toggleSASMode = () => {
         globalThis.isSASActive = !globalThis.isSASActive;
         localStorage.setItem('geofs-op-sas', globalThis.isSASActive);
         if (globalThis.isSASActive) {
@@ -593,13 +593,13 @@
      */
     function applyThrust() {
         if (geofs?.aircraft?.instance) {
-            let ac = geofs.aircraft.instance;
-            if (ac.parts) for (let u in ac.parts) {
-                let s = ac.parts[u];
+            const ac = geofs.aircraft.instance;
+            if (ac.parts) for (const u in ac.parts) {
+                const s = ac.parts[u];
                 if (s?.thrust !== undefined) {
                     // Logic: Cache original values on first activation to allow clean reversal.
                     if (!t_cache.thrust[u]) t_cache.thrust[u] = { thrust: s.thrust, afterBurnerThrust: s.afterBurnerThrust || null, reverseThrust: s.reverseThrust || null };
-                    let mult = window.opMultiplier || 1;
+                    const mult = window.opMultiplier || 1;
                     s.thrust = mult * Number(t_cache.thrust[u].thrust);
                     if (s.afterBurnerThrust !== undefined) s.afterBurnerThrust = (t_cache.thrust[u].afterBurnerThrust !== null) ? mult * t_cache.thrust[u].afterBurnerThrust : s.thrust;
                     if (s.reverseThrust !== undefined) s.reverseThrust = mult * Number(t_cache.thrust[u].reverseThrust);
@@ -618,9 +618,9 @@
      */
     function removeThrust() {
         if (geofs?.aircraft?.instance) {
-            let ac = geofs.aircraft.instance;
-            if (ac.parts) for (let u in t_cache.thrust) {
-                let s = ac.parts[u];
+            const ac = geofs.aircraft.instance;
+            if (ac.parts) for (const u in t_cache.thrust) {
+                const s = ac.parts[u];
                 if (s?.thrust !== undefined) {
                     // Restore original physical properties.
                     s.thrust = t_cache.thrust[u].thrust;
@@ -640,7 +640,7 @@
      */
     function applyCeiling() {
         if (geofs?.aircraft?.instance) {
-            let ac = geofs.aircraft.instance;
+            const ac = geofs.aircraft.instance;
             if (t_cache.zeroThrustAltitude === null && ac.definition?.zeroThrustAltitude !== undefined) t_cache.zeroThrustAltitude = ac.definition.zeroThrustAltitude;
             if (t_cache.zeroRPMAltitude === null && ac.definition?.zeroRPMAltitude !== undefined) t_cache.zeroRPMAltitude = ac.definition.zeroRPMAltitude;
             if (ac.definition) { ac.definition.zeroThrustAltitude = window.opCeiling; ac.definition.zeroRPMAltitude = window.opCeiling; }
@@ -656,7 +656,7 @@
      */
     function removeCeiling() {
         if (geofs?.aircraft?.instance) {
-            let ac = geofs.aircraft.instance;
+            const ac = geofs.aircraft.instance;
             if (ac.definition) {
                 if (t_cache.zeroThrustAltitude !== null) ac.definition.zeroThrustAltitude = t_cache.zeroThrustAltitude;
                 if (t_cache.zeroRPMAltitude !== null) ac.definition.zeroRPMAltitude = t_cache.zeroRPMAltitude;
@@ -673,8 +673,8 @@
      */
     function applyTorqueSuppression() {
         if (!geofs?.aircraft?.instance?.parts) return;
-        for (let u in geofs.aircraft.instance.parts) {
-            let s = geofs.aircraft.instance.parts[u];
+        for (const u in geofs.aircraft.instance.parts) {
+            const s = geofs.aircraft.instance.parts[u];
             if (s?.torque !== undefined) {
                 if (t_cache.torque[u] === undefined) t_cache.torque[u] = s.torque;
                 s.torque = 0;
@@ -688,7 +688,7 @@
      */
     function restoreTorque() {
         if (!geofs?.aircraft?.instance?.parts) return;
-        for (let u in t_cache.torque) {
+        for (const u in t_cache.torque) {
             if (geofs.aircraft.instance.parts[u]) geofs.aircraft.instance.parts[u].torque = t_cache.torque[u];
         }
         t_cache.torque = {};
@@ -700,11 +700,11 @@
     document.addEventListener("keydown", (e) => overpoweredEnginesSuite.handleKeyPress(e));
 
     if (window.V39_NOTIF) {
-        window.V39_NOTIF.success("GeoFS-V3.9_Overpowered-Engines V2.0.0 Loaded.");
+        window.V39_NOTIF.success("GeoFS-V3.9_Overpowered-Engines V2.0.1 Loaded.");
     }
 
     setInterval(() => {
-        let e = geofs?.aircraft?.instance?.aircraftRecord?.id || null;
+        const e = geofs?.aircraft?.instance?.aircraftRecord?.id || null;
         if (e !== lastAcId) {
             t_cache = { thrust: {}, zeroThrustAltitude: null, zeroRPMAltitude: null, torque: {} };
             globalThis.isThrustActive = false; globalThis.isCeilingActive = false;
