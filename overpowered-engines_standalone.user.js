@@ -51,57 +51,57 @@
 // @name:lo             GeoFS-V3.9_ເຄື່ອງຈັກເກີນແຮງ
 // @name:ur             GeoFS-V3.9_زیادہ-طاقت-والے-انجن
 
-// @description         Bypass standard thrust limits with dynamic scaling and simulated afterburners. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:vi      Bỏ qua các giới hạn lực đẩy tiêu chuẩn với khả năng chia tỷ lệ động và bộ đốt sau mô phỏng. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zh-CN   通过动态缩放和模拟加力燃烧室绕过标准推力限制。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zh-TW   透過動態縮放和模擬加力燃燒室繞過標準推力限制。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ja      動的スケーリングとシミュレートされたアフターバーナーを使用して、標準の推力制限をバイパスします。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ko      동적 스케일링 및 시뮬레이션된 애프터버너를 통해 표준 추력 제한을 우회합니다. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fr      Contournez les limites de poussée standard avec une mise à l'échelle dynamique et des postcombustion simulées. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:de      Umgehen Sie Standardschubgrenzen mit dynamischer Skalierung und simulierten Nachbrennern. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:es      Evite los límites de empuje estándar con escalado dinámico y postquemadores simulados. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pt-BR   Ignore os limites de empuxo padrão com escalonamento dinâmico e pós-combustão simulados. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pt-PT   Ignore os limites de impulso padrão com o escalonamento dinâmico e a pós-combustão simulados. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ru      Обходите стандартные ограничения тяги с помощью динамического масштабирования и имитации форсажных камер. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ar      تجاوز حدود الدفع القياسية باستخدام المقياس الديناميكي ومحاكاة الحارقات اللاحقة. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:tr      Dinamik ölçeklendirme ve simüle edilmiş art yakıcılar ile standart itme sınırlarını aşın. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:id      Lewati batas daya dorong standar dengan penskalaan dinamis dan simulasi afterburner. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:th      ข้ามขีดจำกัดแรงขับมาตรฐานด้วยไดนามิกสเกลและตัวเบิร์นเนอร์จำลอง © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pl      Omiń standardowe ograniczenia ciągu dzięki dynamicznemu skalowaniu i symulowanym dopalaczom. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:nl      Omzeil standaard stuwkrachtlimieten met dynamische schaling en gesimuleerde naverbranders. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:it      Bypassa i limiti di spinta standard con ridimensionamento dinamico e postbruciatori simulati. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sv      Förbigå standardtryckgränser med dynamisk skalning och simulerade efterbrännare. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:da      Omgå standard trykgrænser med dynamisk skalering og simulerede efterbrændere. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fi      Ohita normaalit työntövoimarajat dynaamisella skaalaumalla ja simuloiduilla jälkipolttimilla. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:nb      Omgå standard skyvekraftgrenser med dynamisk skalering og simulerte etterbrennere. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:cs      Obejít standardní limity tahu pomocí dynamického škálování a simulovaných přídavných spalování. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hu      Dinamikus skálázással és szimulált utóégetőkkel kerülje ki a szabványos tolóerő-határokat. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ro      Ocoliți limitele standard de tracțiune cu scalare dinamică și postcombustie simulate. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:uk      Обхід стандартних обмежень тяги за допомогою динамічного масштабування та імітації форсажу. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hi      डायनेमिक स्केलिंग और सिम्युलेटेड आफ्टरबर्नर के साथ मानक थ्रस्ट सीमा को बायपास करें। © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:bn      ডায়নামিক স্কেলিং এবং সিমুলেটেড আফটারবার্নারের সাথে স্ট্যান্ডার্ড থ্রাস্ট সীমা বাইপাস করুন। © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fa      با مقیاس بندی پویا و پس سوز شبیه سازی شده، محدودیت های رانش استاندارد را دور بزنید. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:he      עוקף מגבלות דחף סטנדרטיות עם קנה מידה דינמי ומבערים מדומה. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ms      Pintas had tujahan standard dengan penskalaan dinamik dan penunu selepas simulasi. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fil     I-bypass ang mga karaniwang limitasyon ng thrust na may dynamic na pag-scale at mga simulate na afterburner. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:el      Παρακάμψτε τα τυπικά όρια ώσης με δυναμική κλιμάκωση και προσομοιωμένους μετακαυστήρες. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hr      Zaobiđite standardna ograničenja potiska s dinamičkim skaliranjem i simuliranim naknadnim izgaranjem. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sk      Obíďte štandardné limity ťahu pomocou dynamického škálovania a simulovaných prídavných spaľovaní. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:bg      Прескочете стандартните ограничения на тягата с динамично мащабиране и симулирани доизгаряния. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sr      Заобиђите стандардне границе потиска са динамичким скалирањем и симулираним накнадним сагоревањем. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lt      Apeikite standartines traukos ribas naudodami dinaminį mastelio keitimą ir imituojamus papildomus degiklius. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lv      Apejiet standarta vilces ierobežojumus, izmantojot dinamisku mērogošanu un simulētus pēcdedzinātājus. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:et      Dünaamilise skaleerimise ja simuleeritud järelpõletitega saate standardsetest tõukejõupiirangutest mööda minna. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sl      Presegajte standardne omejitve potiska z dinamičnim skaliranjem in simuliranim naknadnim zgorevanjem. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ca      Evita els límits d'empenta estàndard amb escalat dinàmic i postcombustió simulats. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:af      Omseil standaard stootgrense met dinamiese skaal en gesimuleerde naverbranders. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sw      Vikomo vya msukumo wa kawaida wa Bypass na kuongeza nguvu na vichochezi vilivyoiga. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zu      Imikhawulo ye-Bypass ye-thrust enesilinganiso esiguqukayo kanye nama-afterburners alingisiwe. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:mn      Динамик масштаб болон дуурайлган шатаагчийн тусламжтайгаар стандарт ачааллын хязгаарыг алгасах. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:my      တက်ကြွသော အတိုင်းအတာနှင့် ပုံဖော်ထားသော afterburners များဖြင့် ပုံမှန်တွန်းအားကန့်သတ်ချက်များကို ကျော်ဖြတ်ပါ။ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:km      រំលងដែនកំណត់ស្ដង់ដារនៃការរុញច្រានជាមួយនឹងការធ្វើមាត្រដ្ឋានថាមវន្ត និងក្លែងធ្វើម៉ាស៊ីនដុតក្រោយ។ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lo      ຂ້າມຂໍ້ຈຳກັດແຮງດັນມາດຕະຖານດ້ວຍການປັບຂະໜາດແບບໄດນາມິກ ແລະເຄື່ອງເຜົາຜານຫຼັງການຈຳລອງ. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ur      متحرک اسکیلنگ اور نقلی آفٹر برنرز کے ساتھ معیاری زور کی حدود کو نظرانداز کریں۔ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
+// @description         Bypass standard thrust limits with dynamic scaling and simulated afterburners. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:vi      Bỏ qua các giới hạn lực đẩy tiêu chuẩn với khả năng chia tỷ lệ động và bộ đốt sau mô phỏng. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zh-CN   通过动态缩放和模拟加力燃烧室绕过标准推力限制。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zh-TW   透過動態縮放和模擬加力燃燒室繞過標準推力限制。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ja      動的スケーリングとシミュレートされたアフターバーナーを使用して、標準の推力制限をバイパスします。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ko      동적 스케일링 및 시뮬레이션된 애프터버너를 통해 표준 추력 제한을 우회합니다. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fr      Contournez les limites de poussée standard avec une mise à l'échelle dynamique et des postcombustion simulées. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:de      Umgehen Sie Standardschubgrenzen mit dynamischer Skalierung und simulierten Nachbrennern. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:es      Evite los límites de empuje estándar con escalado dinámico y postquemadores simulados. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pt-BR   Ignore os limites de empuxo padrão com escalonamento dinâmico e pós-combustão simulados. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pt-PT   Ignore os limites de impulso padrão com o escalonamento dinâmico e a pós-combustão simulados. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ru      Обходите стандартные ограничения тяги с помощью динамического масштабирования и имитации форсажных камер. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ar      تجاوز حدود الدفع القياسية باستخدام المقياس الديناميكي ومحاكاة الحارقات اللاحقة. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:tr      Dinamik ölçeklendirme ve simüle edilmiş art yakıcılar ile standart itme sınırlarını aşın. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:id      Lewati batas daya dorong standar dengan penskalaan dinamis dan simulasi afterburner. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:th      ข้ามขีดจำกัดแรงขับมาตรฐานด้วยไดนามิกสเกลและตัวเบิร์นเนอร์จำลอง © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pl      Omiń standardowe ograniczenia ciągu dzięki dynamicznemu skalowaniu i symulowanym dopalaczom. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:nl      Omzeil standaard stuwkrachtlimieten met dynamische schaling en gesimuleerde naverbranders. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:it      Bypassa i limiti di spinta standard con ridimensionamento dinamico e postbruciatori simulati. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sv      Förbigå standardtryckgränser med dynamisk skalning och simulerade efterbrännare. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:da      Omgå standard trykgrænser med dynamisk skalering og simulerede efterbrændere. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fi      Ohita normaalit työntövoimarajat dynaamisella skaalaumalla ja simuloiduilla jälkipolttimilla. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:nb      Omgå standard skyvekraftgrenser med dynamisk skalering og simulerte etterbrennere. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:cs      Obejít standardní limity tahu pomocí dynamického škálování a simulovaných přídavných spalování. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hu      Dinamikus skálázással és szimulált utóégetőkkel kerülje ki a szabványos tolóerő-határokat. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ro      Ocoliți limitele standard de tracțiune cu scalare dinamică și postcombustie simulate. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:uk      Обхід стандартних обмежень тяги за допомогою динамічного масштабування та імітації форсажу. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hi      डायनेमिक स्केलिंग और सिम्युलेटेड आफ्टरबर्नर के साथ मानक थ्रस्ट सीमा को बायपास करें। © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:bn      ডায়নামিক স্কেলিং এবং সিমুলেটেড আফটারবার্নারের সাথে স্ট্যান্ডার্ড থ্রাস্ট সীমা বাইপাস করুন। © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fa      با مقیاس بندی پویا و پس سوز شبیه سازی شده، محدودیت های رانش استاندارد را دور بزنید. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:he      עוקף מגבלות דחף סטנדרטיות עם קנה מידה דינמי ומבערים מדומה. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ms      Pintas had tujahan standard dengan penskalaan dinamik dan penunu selepas simulasi. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fil     I-bypass ang mga karaniwang limitasyon ng thrust na may dynamic na pag-scale at mga simulate na afterburner. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:el      Παρακάμψτε τα τυπικά όρια ώσης με δυναμική κλιμάκωση και προσομοιωμένους μετακαυστήρες. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hr      Zaobiđite standardna ograničenja potiska s dinamičkim skaliranjem i simuliranim naknadnim izgaranjem. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sk      Obíďte štandardné limity ťahu pomocou dynamického škálovania a simulovaných prídavných spaľovaní. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:bg      Прескочете стандартните ограничения на тягата с динамично мащабиране и симулирани доизгаряния. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sr      Заобиђите стандардне границе потиска са динамичким скалирањем и симулираним накнадним сагоревањем. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lt      Apeikite standartines traukos ribas naudodami dinaminį mastelio keitimą ir imituojamus papildomus degiklius. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lv      Apejiet standarta vilces ierobežojumus, izmantojot dinamisku mērogošanu un simulētus pēcdedzinātājus. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:et      Dünaamilise skaleerimise ja simuleeritud järelpõletitega saate standardsetest tõukejõupiirangutest mööda minna. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sl      Presegajte standardne omejitve potiska z dinamičnim skaliranjem in simuliranim naknadnim zgorevanjem. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ca      Evita els límits d'empenta estàndard amb escalat dinàmic i postcombustió simulats. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:af      Omseil standaard stootgrense met dinamiese skaal en gesimuleerde naverbranders. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sw      Vikomo vya msukumo wa kawaida wa Bypass na kuongeza nguvu na vichochezi vilivyoiga. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zu      Imikhawulo ye-Bypass ye-thrust enesilinganiso esiguqukayo kanye nama-afterburners alingisiwe. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:mn      Динамик масштаб болон дуурайлган шатаагчийн тусламжтайгаар стандарт ачааллын хязгаарыг алгасах. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:my      တက်ကြွသော အတိုင်းအတာနှင့် ပုံဖော်ထားသော afterburners များဖြင့် ပုံမှန်တွန်းအားကန့်သတ်ချက်များကို ကျော်ဖြတ်ပါ။ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:km      រំលងដែនកំណត់ស្ដង់ដារនៃការរុញច្រានជាមួយនឹងការធ្វើមាត្រដ្ឋានថាមវន្ត និងក្លែងធ្វើម៉ាស៊ីនដុតក្រោយ។ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lo      ຂ້າມຂໍ້ຈຳກັດແຮງດັນມາດຕະຖານດ້ວຍການປັບຂະໜາດແບບໄດນາມິກ ແລະເຄື່ອງເຜົາຜານຫຼັງການຈຳລອງ. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ur      متحرک اسکیلنگ اور نقلی آفٹر برنرز کے ساتھ معیاری زور کی حدود کو نظرانداز کریں۔ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
 
 // @require             https://update.greasyfork.org/scripts/581510/code.js
 // @require             https://update.greasyfork.org/scripts/581511/code.js
@@ -114,11 +114,11 @@
 // @compatible          safari
 // @compatible          brave
 // @compatible          opera
-// @copyright           2026, _init (https://greasyfork.org/users/1594049)
+// @copyright           2026, AMFI-Disable (https://greasyfork.org/users/1594049)
 
 // @namespace           https://greasyfork.org/users/1594049
 // @version             2.0.2
-// @author              _init
+// @author              AMFI-Disable
 // @icon                https://geofs-assets.evengao6688.workers.dev/icons/overpowered-engines.png
 // @match               https://www.geo-fs.com/geofs.php*
 // @grant               none
