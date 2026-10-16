@@ -6,6 +6,18 @@
 
 The professional high-performance propulsion framework for **GeoFS-V3.9**. Designed to bypass standard aircraft limits with precision scaling, atmospheric bypass, and advanced stability augmentation.
 
+---
+
+## ⚖️ Educational & Fair-Play Disclaimer
+
+> [!CAUTION]
+> **IMPORTANT NOTICE & DISCLAIMER**:
+> This codebase is provided strictly for educational, research, and testing purposes in authorized environments.
+> Using automated assistance or unauthorized scripts in violation of platform terms of service or anti-cheat policies may lead to account penalties.
+> The developers and contributors accept no responsibility or liability for misuse of this software.
+
+---
+
 ## ✨ Features
 
 - **🚀 Dual-Core Physics**: Independently control Engine Thrust (up to 100,000x) and Atmospheric Ceiling (up to 100M ft).
