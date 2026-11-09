@@ -126,7 +126,23 @@
 // ==/UserScript==
 
 (() => {
-    
+    /**
+     * Runtime Version Guard: GeoFS-V3.9 Suite Compatibility
+     * Ensures this module only executes on GeoFS v3.9 or earlier, and gracefully
+     * deactivates if GeoFS v4.0+ is detected.
+     */
+    function isUnsupportedGeoFS() {
+        const raw = window.geofs?.version;
+        if (raw === undefined || raw === null) return false;
+        const clean = typeof raw === 'string' ? raw.replace(/^[^\d.]*/, '') : raw;
+        const num = typeof clean === 'number' ? clean : parseFloat(clean);
+        return !isNaN(num) && num >= 4.0;
+    }
+
+    if (isUnsupportedGeoFS()) {
+        console.warn("[GeoFS-V3.9_Overpowered-Engines] Inactive: GeoFS v" + window.geofs?.version + " detected (suite only supports GeoFS v3.9 and earlier).");
+        return;
+    }
 
     console.log("[GeoFS-V3.9_Overpowered-Engines] >> Initializing SAS stability engine...");
 
@@ -703,7 +719,11 @@
         window.V39_NOTIF.success("GeoFS-V3.9_Overpowered-Engines V2.0.1 Loaded.");
     }
 
-    setInterval(() => {
+    const checkInterval = setInterval(() => {
+        if (isUnsupportedGeoFS()) {
+            clearInterval(checkInterval);
+            return;
+        }
         const e = geofs?.aircraft?.instance?.aircraftRecord?.id || null;
         if (e !== lastAcId) {
             t_cache = { thrust: {}, zeroThrustAltitude: null, zeroRPMAltitude: null, torque: {} };
@@ -713,7 +733,15 @@
     }, 1000);
 
     // SAS Ticker loop (50Hz)
-    setInterval(() => overpoweredEnginesSuite.tickSAS(), 20);
+    const sasInterval = setInterval(() => {
+        if (isUnsupportedGeoFS()) {
+            clearInterval(sasInterval);
+            return;
+        }
+        overpoweredEnginesSuite.tickSAS();
+    }, 20);
+
+    if (isUnsupportedGeoFS()) return;
 
     const autopilotBar = document.getElementsByClassName("geofs-autopilot-bar")[0];
     if (autopilotBar && !document.getElementById("opModBtn")) {
