@@ -1,37 +1,25 @@
-# **GeoFS-V3.9**_Overpowered-Engines
+# GeoFS-V3.9_Overpowered-Engines
 
-![Version](https://img.shields.io/badge/Version-V2.0.2-3b82f6?style=flat-square&logo=git&logoColor=white)
-![Ecosystem](https://img.shields.io/badge/GeoFS--V3.9-Overpowered_Engines-ef4444?style=flat-square&logo=zap&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Stable-10b981?style=flat-square&logo=lighthouse&logoColor=white)
+![Version](https://img.shields.io/badge/Version-v3.9.0-3b82f6?style=flat-square)
 
-The professional high-performance propulsion framework for **GeoFS-V3.9**. Designed to bypass standard aircraft limits with precision scaling, atmospheric bypass, and advanced stability augmentation.
+Adds adjustable thrust, altitude ceiling, and stability controls.
 
----
+## Features
 
-## ⚖️ Educational & Fair-Play Disclaimer
+- Open the controls with **OP ENGINES** on the GeoFS autopilot bar.
+- Adjust thrust and ceiling settings, use stability augmentation, and configure a hotkey.
+- The panel can coordinate with Autothrottle when both scripts are running.
 
-> [!CAUTION]
-> **IMPORTANT NOTICE & DISCLAIMER**:
-> This codebase is provided strictly for educational, research, and testing purposes in authorized environments.
-> Using automated assistance or unauthorized scripts in violation of platform terms of service or anti-cheat policies may lead to account penalties.
-> The developers and contributors accept no responsibility or liability for misuse of this software.
+## Installation
 
----
+1. Install a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/).
+2. Install or update the script from [Greasy Fork](https://greasyfork.org/en/scripts/581520-geofs-v3-9-overpowered-engines).
+3. Open or reload GeoFS V3.9. The script starts automatically.
 
-## ✨ Features
+The script activates only when GeoFS reports version V3.9 (including V3.9 patch releases). It waits for the version to become available and remains inactive on other versions. Most standalone scripts load the Core Library and Design System as dependencies; the userscript manager handles those dependencies.
 
-- **🚀 Dual-Core Physics**: Independently control Engine Thrust (up to 100,000x) and Atmospheric Ceiling (up to 100M ft).
-- **🛡️ Stability Augmentation (SAS)**: Real-time physics loop to counteract asymmetric torque and "death spins" at extreme thrust.
-- **⌨️ Keyboard Optimized**: Specialized dampening for binary keyboard inputs to ensure a stable flight path.
-- **🧩 Hybrid Input**: Precision sliders synchronized with a manual numeric typing field for exact performance tuning.
-- **🚀 CDN Loader Architecture**: Injects stability filters to maintain controlled high-speed flight.
+The **GeoFS-V3.9_Ecosystem** panel shows startup status and notifications. Select × to dismiss it, or wait for it to disappear. A script listed as not detected is not necessarily uninstalled.
 
-## 🛠️ Installation
+## License
 
-### Standalone (Tampermonkey)
-
-1. Install the [Tampermonkey](https://www.tampermonkey.net/) extension.
-2. Install the script via [**Greasy Fork**](https://greasyfork.org/en/scripts/581520-geofs-v3-9-overpowered-engines).
-3. Refresh GeoFS and the module will automatically initialize alongside the HUD.
-
-*© 2026 AMFI-Disable. Part of the [**GeoFS-V3.9**_Ecosystem](https://sites.google.com/view/geofs-v39-ecosystem/home).*
+[MIT](license) · © 2026 AMFI-Disable · [GeoFS-V3.9 Ecosystem](https://sites.google.com/view/geofs-v39-ecosystem/home)
