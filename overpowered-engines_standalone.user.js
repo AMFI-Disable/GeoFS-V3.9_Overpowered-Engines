@@ -117,9 +117,9 @@
 // @copyright           2026, AMFI-Disable (https://greasyfork.org/users/1594049)
 
 // @namespace           https://greasyfork.org/users/1594049
-// @version             2.0.2
+// @version             2.0.7
 // @author              AMFI-Disable
-// @icon                https://geofs-assets.evengao6688.workers.dev/icons/overpowered-engines.png
+// @icon                https://www.geo-fs.com/images/icons/favicon.ico
 // @match               https://www.geo-fs.com/geofs.php*
 // @grant               none
 // @license             MIT
@@ -176,17 +176,17 @@
             card.id = "opEngineCard"; 
             card.style.cssText = `
                 position: fixed; bottom: 120px; left: 540px; width: 320px; height: auto; z-index: 10000; 
-                display: none; padding: 0; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; 
-                overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); background: rgba(10,15,20,0.85); 
-                backdrop-filter: blur(12px); color: white; font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; user-select: none; 
+                display: none; padding: 0; border: 1px solid #888; border-radius: 15px; 
+                overflow: hidden; box-shadow: 0 0 5px #000; background: rgba(0,0,0,0.8); 
+                color: white; font-family: Helvetica, Arial, sans-serif; user-select: none; 
                 box-sizing: border-box; transform: translate(0,0); transition: none; cursor: grab;
             `;
             
             card.innerHTML = `
-                <div id="opEngineHeader" style="background: rgba(255,75,43,0.1); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); pointer-events: none;">
+                <div id="opEngineHeader" style="background: rgba(255,255,255,0.05); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); pointer-events: none;">
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="font-size: 14px;">🚀</span>
-                        <span id="opEngineHeaderText" style="font-weight: 800; font-size: 11px; letter-spacing: 1.5px; color: #ff4b2b; text-transform: uppercase;">Overpowered Engines</span>
+                        
+                        <span id="opEngineHeaderText" style="font-weight: normal; font-size: 12px; letter-spacing: normal; color: #fff; text-transform: uppercase;">Overpowered Engines</span>
                     </div>
                     <button onclick="window.toggleOpEngineUI()" style="background: none; border: none; color: #666; cursor: pointer; font-size: 18px; transition: 0.2s; pointer-events: auto;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='#666'">✕</button>
                 </div>
@@ -200,31 +200,31 @@
                             <div style="display: flex; gap: 8px;">
                             <button id="opThrustBtn" onclick="window.toggleThrustMode()" style="
                                 flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; 
-                                padding: 10px; border-radius: 10px; cursor: pointer; font-size: 10px; font-weight: 800; 
-                                transition: all 0.3s; letter-spacing: 1.5px;
+                                padding: 10px; border-radius: 15px; cursor: pointer; font-size: 12px; font-weight: normal; 
+                                transition: all 0.3s; letter-spacing: normal;
                             ">ACTIVATE THRUST</button>
                             <button id="opSASBtn" onclick="window.toggleSASMode()" title="Stability Augmentation System" style="
-                                width: 50px; background: rgba(0,242,255,0.05); border: 1px solid rgba(0,242,255,0.1); color: #00f2ff; 
+                                width: 50px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #dddddd; 
                                 padding: 10px; border-radius: 10px; cursor: pointer; font-size: 10px; font-weight: 900; 
                                 transition: all 0.3s;
                             ">SAS</button>
                         </div>
                         
-                        <div style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="background: transparent; padding: 4px 0;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                <span style="font-size: 8px; color: #888; text-transform: uppercase;">Thrust Multiplier</span>
+                                <span style="font-size: 10px; color: #888; text-transform: uppercase;">Thrust Multiplier</span>
                                 <div style="display: flex; align-items: center; gap: 5px;">
                                     <input type="number" id="opMultInput" value="${window.opMultiplier}" step="0.1" style="
-                                        background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: #ff4b2b; 
+                                        background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: #dddddd; 
                                         width: 60px; font-size: 12px; font-weight: 900; text-align: center; border-radius: 4px; padding: 2px;
                                     " oninput="window.overpoweredEnginesSuite.syncThrustFromInput(this.value)">
-                                    <span style="color: #ff4b2b; font-weight: 900; font-size: 12px;">x</span>
+                                    <span style="color: #dddddd; font-weight: 900; font-size: 12px;">x</span>
                                 </div>
                             </div>
                             <input type="range" id="opMultSlider" min="0" max="${this.thrustSnapPoints.length - 1}" step="1" 
                                 value="${this.getThrustIndex(window.opMultiplier)}" 
                                 oninput="window.overpoweredEnginesSuite.syncThrustFromSlider(this.value)" 
-                                style="width: 100%; accent-color: #ff4b2b; cursor: pointer; height: 4px; background: rgba(255,255,255,0.1);">
+                                style="width: 100%; accent-color: #dddddd; cursor: pointer; height: 4px; background: rgba(255,255,255,0.1);">
                             </div>
                         </div>
                     </div>
@@ -235,19 +235,19 @@
                         <div id="opCeilingSection" style="display: flex; flex-direction: column; gap: 10px; pointer-events: auto;">
                             <button id="opCeilingBtn" onclick="window.toggleCeilingMode()" style="
                                 background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; 
-                                padding: 10px; border-radius: 10px; cursor: pointer; font-size: 10px; font-weight: 800; 
-                                transition: all 0.3s; letter-spacing: 1.5px;
+                                padding: 10px; border-radius: 15px; cursor: pointer; font-size: 12px; font-weight: normal; 
+                                transition: all 0.3s; letter-spacing: normal;
                             ">BYPASS ATMOSPHERE</button>
                             
-                            <div style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+                            <div style="background: transparent; padding: 4px 0;">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                    <span style="font-size: 8px; color: #888; text-transform: uppercase;">Altitude Ceiling</span>
-                                    <span id="opCeilingReadout" style="color: #ff9f05; font-weight: 900; font-size: 12px;">${this.formatNumberCompact(window.opCeiling)} ft</span>
+                                    <span style="font-size: 10px; color: #888; text-transform: uppercase;">Altitude Ceiling</span>
+                                    <span id="opCeilingReadout" style="color: #dddddd; font-weight: 900; font-size: 12px;">${this.formatNumberCompact(window.opCeiling)} ft</span>
                                 </div>
                                 <input type="range" id="opCeilingSlider" min="0" max="${this.ceilingSnapPoints.length - 1}" step="1" 
                                     value="${this.getCeilingIndex(window.opCeiling)}" 
                                     oninput="window.overpoweredEnginesSuite.syncCeilingFromSlider(this.value)" 
-                                    style="width: 100%; accent-color: #ff9f05; cursor: pointer; height: 4px; background: rgba(255,255,255,0.1);">
+                                    style="width: 100%; accent-color: #dddddd; cursor: pointer; height: 4px; background: rgba(255,255,255,0.1);">
                             </div>
                         </div>
                     </div>
@@ -255,14 +255,14 @@
                     <!-- FOOTER & KEYBIND -->
                     <div style="display: flex; justify-content: space-between; align-items: center; pointer-events: auto;">
                         <button id="opKeybindBtn" onclick="window.overpoweredEnginesSuite.startKeybind()" style="
-                            background: rgba(255,75,43,0.1); border: 1px solid rgba(255,75,43,0.3); color: #ff4b2b; 
-                            padding: 4px 10px; border-radius: 6px; font-size: 9px; font-weight: bold; cursor: pointer; text-transform: uppercase;
+                            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #dddddd; 
+                            padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; text-transform: uppercase;
                         ">${this.state.keybind}</button>
                         <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                             <div id="opStatusMsg" style="font-size: 8px; color: #aaa; text-align: right; opacity: 0.6; font-style: italic;">
+                             <div id="opStatusMsg" style="font-size: 10px; color: #aaa; text-align: right; opacity: 0.6; font-style: italic;">
                                 Press [${this.state.keybind.toUpperCase()}] to toggle Thrust.
                             </div>
-                            <div id="opSASMsg" style="font-size: 7px; color: #00f2ff; text-align: right; opacity: 0.5; display: ${globalThis.isSASActive ? 'block' : 'none'};">
+                            <div id="opSASMsg" style="font-size: 10px; color: #dddddd; text-align: right; opacity: 0.5; display: ${globalThis.isSASActive ? 'block' : 'none'};">
                                 SAS ACTIVE: Turns may feel stiff.
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                     thrustSection.style.opacity = "1";
                     lockOverlay.style.display = "none";
                     headerText.innerText = "Overpowered Engines";
-                    headerText.style.color = "#ff4b2b";
+                    headerText.style.color = "#dddddd";
                 }
             });
             
@@ -500,7 +500,7 @@
                     this.state.keybind = key; localStorage.setItem('geofs-op-keybind', key);
                     this.state.isSettingKey = false;
                     document.getElementById("opKeybindBtn").textContent = key;
-                    document.getElementById("opKeybindBtn").style.color = "#ff4b2b";
+                    document.getElementById("opKeybindBtn").style.color = "#dddddd";
                     document.getElementById("opStatusMsg").textContent = `Press [${key.toUpperCase()}] to toggle Thrust.`;
                     if (window.V39_NOTIF) window.V39_NOTIF.success(`🎹 Hotkey set to [ ${key.toUpperCase()} ]`);
                 }
@@ -524,24 +524,24 @@
             // Thrust Toggle State.
             if (tBtn) {
                 tBtn.innerText = globalThis.isThrustActive ? "THRUST: ACTIVE" : "ACTIVATE THRUST";
-                tBtn.style.background = globalThis.isThrustActive ? "rgba(255,75,43,0.3)" : "rgba(255,255,255,0.05)";
-                tBtn.style.borderColor = globalThis.isThrustActive ? "#ff4b2b" : "rgba(255,255,255,0.1)";
-                tBtn.style.boxShadow = globalThis.isThrustActive ? "0 0 15px rgba(255,75,43,0.3)" : "none";
+                tBtn.style.background = globalThis.isThrustActive ? "rgba(76,175,80,0.5)" : "rgba(255,255,255,0.05)";
+                tBtn.style.borderColor = globalThis.isThrustActive ? "#4caf50" : "rgba(255,255,255,0.1)";
+                tBtn.style.boxShadow = globalThis.isThrustActive ? "0 0 15px rgba(255,255,255,0.2)" : "none";
                 tBtn.disabled = isAthrActive;
             }
             // Ceiling Bypass State.
             if (cBtn) {
                 cBtn.innerText = globalThis.isCeilingActive ? "CEILING: BYPASSED" : "BYPASS ATMOSPHERE";
-                cBtn.style.background = globalThis.isCeilingActive ? "rgba(255,159,5,0.3)" : "rgba(255,255,255,0.05)";
-                cBtn.style.borderColor = globalThis.isCeilingActive ? "#ff9f05" : "rgba(255,255,255,0.1)";
-                cBtn.style.boxShadow = globalThis.isCeilingActive ? "0 0 15px rgba(255,159,5,0.3)" : "none";
+                cBtn.style.background = globalThis.isCeilingActive ? "rgba(76,175,80,0.5)" : "rgba(255,255,255,0.05)";
+                cBtn.style.borderColor = globalThis.isCeilingActive ? "#4caf50" : "rgba(255,255,255,0.1)";
+                cBtn.style.boxShadow = globalThis.isCeilingActive ? "0 0 15px rgba(255, 255, 255, 0.3)" : "none";
                 cBtn.disabled = isAthrActive;
             }
             // SAS State.
             if (sBtn) {
-                sBtn.style.background = globalThis.isSASActive ? "rgba(255,159,5,0.3)" : "rgba(255,159,5,0.05)";
-                sBtn.style.borderColor = globalThis.isSASActive ? "#ff9f05" : "rgba(255,159,5,0.15)";
-                sBtn.style.boxShadow = globalThis.isSASActive ? "0 0 15px rgba(255,159,5,0.3)" : "none";
+                sBtn.style.background = globalThis.isSASActive ? "rgba(76,175,80,0.5)" : "rgba(255, 255, 255, 0.05)";
+                sBtn.style.borderColor = globalThis.isSASActive ? "#4caf50" : "rgba(255, 255, 255, 0.15)";
+                sBtn.style.boxShadow = globalThis.isSASActive ? "0 0 15px rgba(255, 255, 255, 0.3)" : "none";
                 document.getElementById("opSASMsg").style.display = globalThis.isSASActive ? 'block' : 'none';
             }
             
